@@ -1,15 +1,5 @@
 
 
-card{
-    display: none;
-}
-
-h3{
-    display: flex;
-}
-
-@media (max-width:1024px) {
-
     *{
         font-family: "Poppins", sans-serif;
         overflow-x: hidden;
@@ -17,8 +7,12 @@ h3{
         margin: 0;
     }
 
+html{
+    background-color: rgb(12, 12, 107);
+}
+
     a{
-        width: 100%;
+        width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -51,17 +45,26 @@ h3{
     }
 
     .logo{
-        width: 55%;
+        width: 30%;
     }
 
     h2,h1{
-        font-size: 30px;
+        font-size: 40px;
         border: 0;
         margin: 0;
         color: white;
         position: relative;
         bottom: 30px;
         font-weight: 700;
+        -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    p{
+        color: white;
+
+        position: relative;
+        bottom: 35px;
     }
 
     list{
@@ -83,7 +86,7 @@ h3{
     }
 
     .block{
-        width: 80%;
+        width: 100%;
         height: auto;
         border-radius: 20px;
         background-color: white;
@@ -104,4 +107,45 @@ h3{
         border: 0;
         margin: 0 0 0 30px;
     }
-}
+
+
+    @-webkit-keyframes scale-up-center {
+        0% {
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5);
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+      }
+      @keyframes scale-up-center {
+        0% {
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5);
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+      }
+
+    @media (max-width:1050px) {
+        
+        .block{
+            width: 80%;
+        }
+
+        .logo{
+            width: 80%;
+        }
+
+        h1,h2{
+            font-size: 27px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+
+    }
